@@ -1,4 +1,4 @@
-#Diary
+# Diary
 
 This project is mostly personal at this point but could possibly be used by anyone.
 
