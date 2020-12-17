@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>quick snippets</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" href="https://www.f40c40.com/feed.rss">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R1C5F4LB2D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R1C5F4LB2D');
+</script>
+</head>
+<body>
+<div id="header">
+  <nav>
+    <ul>
+      <li><a rel="alternate" type="application/rss+xml" href="https://www.f40c40.com/feed.rss" class="feed">RSS Feed</a></li>
+      <li><a href="/other.html">Other Stuff</a></li>
+    </ul>
+  </nav>
+  <header>
+  <h1>Quick Snippets</h1>
+  <p>A really quick overview of my day.</p>
+  </header>
+</div>
+<main>
+{% for date, content in posts %}
+<article><p><i>{{ date }}:</i> {{ content }}</p></article>
+{% endfor %}
+</main>
+<nav id="footer">
+	<ul>
+		{% if crumbs[0] != None %}
+		<li><a href="{{crumbs[0]}}">Previous Page</a></li>
+		{% endif %}
+		{% if crumbs[1] != None %}
+		<li><a href="{{crumbs[1]}}">Next Page</a></li>
+		{% endif %}
+	</ul>
+</nav>
+</body>
+</html>

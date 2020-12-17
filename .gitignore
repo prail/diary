@@ -1,0 +1,10 @@
+#Python ignores
+__pycache__/
+*.py[cod]
+*$py.class
+output/
+oldpostslog.txt
+.DS_Store/
+key.txt
+settings.cfg
+*.db
